@@ -1,5 +1,4 @@
 import { View, Text, Image } from "react-native";
-import { Skills } from "@/components/skills";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
 import { TopSheetUI } from "@/components/top-sheet";
 import { BottomSheetUI } from "@/components/bottom-sheet";
@@ -26,9 +25,6 @@ export default function Profile() {
           <Text className="text-white font-semibold">@maurotwister475</Text>
         </View>
       </TopSheetUI>
-      <BottomSheetUI flex={3}>
-        <Skills />
-      </BottomSheetUI>
     </View>
   );
 }

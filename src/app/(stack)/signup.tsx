@@ -1,10 +1,10 @@
 import { View } from "react-native";
 import { BottomSheetUI } from "@/components/bottom-sheet";
 import { FormInputs } from "@/components/forms/input-form";
-import { Title } from "@/components/title";
 import { TopSheetUI } from "@/components/top-sheet";
 import { colors } from "@/styles/colors";
 import { UserPlus } from "lucide-react-native";
+import { Title } from "@/components/title";
 
 export default function SignUp() {
 
@@ -15,10 +15,10 @@ export default function SignUp() {
         backgroundColor: colors.violet[800],
       }}
     >
-      <TopSheetUI flex={3}>
+      <TopSheetUI flex={1}>
         <UserPlus color="#fff" size={80} />
       </TopSheetUI>
-      <BottomSheetUI flex={2}>
+      <BottomSheetUI flex={3}>
         <View className="gap-4 flex-col justify-between">
           <Title size="md" title="Cadastre-se" />
           <FormInputs />

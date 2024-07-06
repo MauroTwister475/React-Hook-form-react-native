@@ -1,30 +1,30 @@
-import { forwardRef } from 'react';
-import { Text, TextInput, View } from 'react-native';
-import { cn } from '@/lib/utils';
+import { forwardRef, ElementType } from "react";
+import { TextInput, Text, View } from "react-native";
+import { cn } from "@/lib/utils";
 
 export interface InputProps
   extends React.ComponentPropsWithoutRef<typeof TextInput> {
-  label?: string;
-  labelClasses?: string;
+  Icon?: ElementType;
+  className?: string;
   inputClasses?: string;
+  errors?: string;
 }
+
 const Input = forwardRef<React.ElementRef<typeof TextInput>, InputProps>(
-  ({ className, label, labelClasses, inputClasses, ...props }, ref) => (
-    <View className={cn('flex flex-col gap-1.5 rounded-lg ', className)}>
-      {label && <Text className={cn('text-base', labelClasses)}>{label}</Text>}
-      <TextInput
-        placeholderTextColor="#363636"
-        style={{ color: "#000"}}
-        className={cn(
-          inputClasses,
-          'py-2 h-14 px-4 rounded-lg  bg-gray-100'
-        )}
-        {...props}
-      />
+  ({ className, inputClasses, errors, Icon, ...props }, ref) => (
+    <View className={cn(" ", className)}>
+      <View className="bg-zinc-800 flex flex-row items-center rounded-lg px-4">
+        {Icon && <Icon size={20} color={"#8C8D8E"} />}
+        <TextInput
+          placeholderTextColor="#8C8D8E"
+          style={{ color: "#cecece" }}
+          className={cn(inputClasses, "py-2 h-14 px-2.5")}
+          {...props}
+        />
+      </View>
+      <Text className="text-red-500 text-sm inline-block">{errors}</Text>
     </View>
   )
 );
 
 export { Input };
-
-

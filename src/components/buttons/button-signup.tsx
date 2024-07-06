@@ -1,7 +1,11 @@
 import { TouchableOpacity, TouchableOpacityProps, Text } from "react-native";
 import { colors } from "@/styles/colors";
 
-export function ButtonSignUp({ ...rest }: TouchableOpacityProps) {
+interface ButtonSignUpProps extends TouchableOpacityProps {
+  isSubmitting?: boolean,
+}
+
+export function ButtonSignUp({ isSubmitting, ...rest }: ButtonSignUpProps) {
   return (
     <TouchableOpacity
       style={{
@@ -11,13 +15,14 @@ export function ButtonSignUp({ ...rest }: TouchableOpacityProps) {
         paddingHorizontal: 18,
         paddingVertical: 12,
         borderRadius: 8,
-        marginTop: 18,
+        marginTop: 10,
+        shadowOpacity: isSubmitting ? 0.1 : 1,
       }}
       activeOpacity={0.4}
       {...rest}
     >
       <Text className="text-white text-center font-bold text-lg">
-        Iniciar
+        {isSubmitting ? "Carregando..." : "Login"}
       </Text>
     </TouchableOpacity>
   );

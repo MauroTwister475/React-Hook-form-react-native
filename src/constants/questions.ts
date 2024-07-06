@@ -1,4 +1,4 @@
-import { QuestionsType } from "@/types/questions";
+import { QuestionsType } from "@/types/session";
 
 export const QUESTIONS: QuestionsType = {
   "IPIL High School": [

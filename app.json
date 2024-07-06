@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "QuizIpil",
-    "slug": "ipil",
+    "name": "rhfReact-native",
+    "slug": "rhf",
     "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",

@@ -38,13 +38,6 @@ export default function DrawerLayout() {
           iconName: "person",
         } as CustonDrawerType}
       />
-      <Drawer.Screen
-        name="about"
-        options={{
-          drawerLabel: "Sobre o app",
-          iconName: "info",
-        } as CustonDrawerType}
-      />
     </Drawer>
   );
 }

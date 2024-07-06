@@ -1,3 +1,4 @@
+import { colors } from "@/styles/colors";
 import { ReactNode } from "react";
 import { View, ViewProps } from "react-native";
 import { twMerge } from "tailwind-merge";
@@ -15,11 +16,10 @@ export function BottomSheetUI({
 }: BottomSheeetUIProps) {
   return (
     <View
-      className={twMerge("", className)}
+      className={twMerge("w-full bg-zinc-900 items-center justify-center", className)}
       style={{
         flex: flex,
         width: "100%",
-        backgroundColor: "#fff",
         borderTopRightRadius: 20,
         borderTopLeftRadius: 20,
         paddingVertical: 28,

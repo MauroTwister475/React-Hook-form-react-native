@@ -11,12 +11,12 @@ interface TitleProps extends TextProps {
 export function Title({ title, description, theme = "dark", size, ...rest }: TitleProps) {
   return (
     <Text
-      className={clsx("w-full font-normal ", {
+      className={clsx("w-full font-normal text-center mb-4 ", {
         "text-base": size === "sm",
         "text-xl font-semibold": size === "md",
         "text-2xl font-bold": size === "lg",
         "text-slate-900 ": theme === "dark",
-        "text-white": theme === "light",
+        "text-gray-400": theme === "light",
       })}
       {...rest}
     >

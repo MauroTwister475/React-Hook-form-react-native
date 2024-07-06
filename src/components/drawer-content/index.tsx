@@ -3,7 +3,7 @@ import { DrawerContentComponentProps } from "@react-navigation/drawer";
 import { DrawerButton } from "./drawer-button";
 import { CustonDrawerType } from "@/types/navigation";
 import { colors } from "@/styles/colors";
-import { Logo } from "@/components/logo";
+import { Flag } from "lucide-react-native";
 
 export function DrawerContent(props: DrawerContentComponentProps) {
   return (
@@ -14,9 +14,9 @@ export function DrawerContent(props: DrawerContentComponentProps) {
         rowGap: 8,
       }}
     >
-      <Logo
+      <Flag
         color={colors.violet[800]}
-        sizeIcon={40}
+        size={40}
         className="text-slate-900 text-xl"
       />
       {props.state.routes.map((route, index) => {
